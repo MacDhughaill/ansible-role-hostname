@@ -1,0 +1,3 @@
+---
+# The new name to be applied as hostname on target system.
+set_hostname_new_name:
