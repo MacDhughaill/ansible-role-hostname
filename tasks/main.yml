@@ -16,3 +16,10 @@
   changed_when: "set_hostname_windows_change_result.rc == 0"
   failed_when: "'the new name is the same as the current' not in set_hostname_windows_change_result.stderr"
   notify: "Windows reboot for name change"
+
+- name: Reboot Windows to apply new hostname
+  win_reboot:
+  when: ansible_os_family == "Windows"
+
+- name: Add new hostname to Ansible's facts
+  setup:

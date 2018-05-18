@@ -1,3 +1,0 @@
----
-- name: Windows reboot for name change
-  win_reboot:
